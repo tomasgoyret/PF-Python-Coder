@@ -7,7 +7,14 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import Template, Context
 from django.template import loader
-from EntregableApp.models import Familiares 
+from EntregableApp.models import Familiares, BienesFamiliares, SegundosFamiliares
 
 def inicio(request):
-    return render(request, 'inicio.html')
+    return render(request, 'EntregableApp/inicio.html')
+def familia(request):
+    return render(request, 'EntregableApp/familia.html')
+def bienes(request):
+    return render(request, 'EntregableApp/bienes.html')
+def familia_segunda(request):
+    return render(request, 'EntregableApp/familia_segunda.html')
+    
