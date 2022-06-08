@@ -55,7 +55,7 @@ ROOT_URLCONF = 'Entregable1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r"C:/Users/yo/Desktop/Django/MVTLANGENEKER1/EntregableMVT/plantillas"],
+        'DIRS': [r"C:\Users\yo\Desktop\Django\ProyectoFinal\PF-Python-Coder\Entregable1\EntregableApp\template"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
