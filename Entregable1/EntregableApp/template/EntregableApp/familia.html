@@ -5,4 +5,17 @@
 {% block section_name %}
 <h1>Familia</h1>
 <h3>Pagina de Familia directa</h3>
+<div>
+    {% for persona in familiares %}
+    <div>
+        <h2>Nombre : {{persona.nombre}}</h2>
+        <h3>Apellido: {{persona.apellido}} </h3>
+        <!-- <h3>DNI: {{persona.dni}} </h3>
+        <h3>Rol: {{persona.rol}} </h3>
+        <h3>Fecha de nacimiento: {{persona.fechaNacimiento}} </h3> -->
+    </div>
+    <br>
+    {% endfor %}
+
+</div>
 {% endblock %}

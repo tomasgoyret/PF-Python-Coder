@@ -16,8 +16,11 @@ def inicio(request):
     return HttpResponse(documento)
     
 def familia(request):
+    familiares = Familiares.objects.all()
+    # print(familiares[0])
+    contexto = {'familiares' : familiares}
     plantilla = loader.get_template('EntregableApp/familia.html')
-    documento = plantilla.render()
+    documento = plantilla.render(contexto)
     return HttpResponse(documento)
 def bienes(request):
     return render(request, 'EntregableApp/bienes.html')
