@@ -27,8 +27,6 @@ def familia_segunda(request):
 def familiaformulario(request):
     if request.method == 'POST':
         miFormulario = FamiliaresFormulario(request.POST)
-        print(miFormulario)
-        print("mirar aca")
         if miFormulario.is_valid:
             informacion = miFormulario.cleaned_data
         nombre = informacion['nombre']

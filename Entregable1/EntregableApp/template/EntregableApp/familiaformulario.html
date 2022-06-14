@@ -9,6 +9,7 @@
 <p style="color: red;">Estan mal los datos, revisar</p>
 {% endif %}
 <form action="" method="POST">{% csrf_token %}
+    <h6>Formato de la fecha de nacimiento "YYYY-MM-DD"</h6>
     <table>
         {{ miFormulario.as_table }} 
     </table>
