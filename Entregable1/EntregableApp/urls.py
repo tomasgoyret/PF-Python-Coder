@@ -6,6 +6,6 @@ urlpatterns = [
     path("bienes", views.bienes, name="bienes"),
     path("familia", views.familia, name="familia"),
     path("familiaSegunda", views.familia_segunda, name="familiaSegunda"),
-    path("familiaFormulario", views.familiaformulario, name="familiaFormulario"),
+    path("familiaformulario", views.familiaformulario, name="familiaformulario"),
     path("bienesformulario", views.bienesformulario, name="bienesformulario"),
 ]
