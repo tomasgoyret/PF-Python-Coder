@@ -35,4 +35,4 @@ Prueba de formularios:
 
 Prueba de búsqueda:
     
-    Ingresar el nombre del familiar que se desea buscar
+    Ingresar el nombre del familiar directo que se desea buscar en el sector de búsqueda
