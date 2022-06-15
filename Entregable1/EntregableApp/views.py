@@ -76,9 +76,14 @@ def familia_segundaformulario(request):
         rol = informacion['rol']
         fechaDeNacimiento = informacion['fechaDeNacimiento']
         edad = informacion['edad']
-        familia = Familiares_SegundosFormulario(nombre=nombre,apellido=apellido,rol=rol,edad=edad,fechaDeNacimiento=fechaDeNacimiento)
+        familia = SegundosFamiliares(nombre=nombre,apellido=apellido,rol=rol,edad=edad,fechaDeNacimiento=fechaDeNacimiento)
         familia.save()
         return render(request,'EntregableApp/inicio.html')
     else:
         miFormulario = Familiares_SegundosFormulario()
     return render(request,'EntregableApp/familia_segundaformulario.html', {"miFormulario":miFormulario})
+def busquedafamilia(request):
+    return render(request,'EntregableApp/busquedafamilia.html')
+def buscar(request):
+    respuesta= f"Estoy buscando a:{request.GET['nombre']}"
+    return HttpResponse(respuesta)
