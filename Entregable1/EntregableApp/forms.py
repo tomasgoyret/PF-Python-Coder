@@ -11,3 +11,9 @@ class BienesFormulario(forms.Form):
     nombre = forms.CharField()
     valuacion = forms.CharField()
     antigüedad = forms.IntegerField()
+class Familiares_SegundosFormulario(forms.Form):
+    nombre = forms.CharField()
+    apellido = forms.CharField()
+    fechaDeNacimiento = forms.DateField()
+    edad = forms.IntegerField()
+    rol = forms.CharField()

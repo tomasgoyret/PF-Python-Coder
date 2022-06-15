@@ -5,4 +5,14 @@
 {% block section_name %}
 <h1>Familia Segunda</h1>
 <h3>Pagina de Familiares Segundos</h3>
+<div>
+    {% for familia in segundosfamiliares %}
+    <div>
+        <h2>Nombre : {{familia.nombre}}</h2>
+        <h3>Apellido: {{familia.apellido}}</h3>
+    </div>
+    <br>
+    {% endfor %}
+
+</div>
 {% endblock %}
