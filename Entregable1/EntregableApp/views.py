@@ -85,5 +85,10 @@ def familia_segundaformulario(request):
 def busquedafamilia(request):
     return render(request,'EntregableApp/busquedafamilia.html')
 def buscar(request):
-    respuesta= f"Estoy buscando a:{request.GET['nombre']}"
+    if request.GET["nombre"]: 
+        nombre = request.GET['nombre']
+        datos = Familiares.objects.filter(nombre__icontains = nombre)
+        return render(request,"EntregableApp/resultadobusqueda.html", {"nombre" : nombre, "datos" : datos, "cantResultados" : datos.count()})
+    else:
+        respuesta ="No enviaste datos"
     return HttpResponse(respuesta)
