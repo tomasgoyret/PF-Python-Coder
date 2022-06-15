@@ -1,0 +1,15 @@
+<h1>Resultado</h1>
+<h3>Estamos buscando: {{nombre}}</h3>
+<h3>Cantidad de resultados: {{cantResultados}}</h3>
+{% if datos %}
+<div>
+    {% for dato in datos %}
+    <div>
+        <h2>Nombre : {{dato.nombre}}</h2>
+        <h3>Apellido: {{dato.apellido}} </h3>
+        <h3>Apellido: {{dato.edad}} </h3>
+    </div>
+    <br>
+    {% endfor %}
+</div>
+{% endif %}
